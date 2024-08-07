@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		680CFCF22C5FED0A00587194 /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680CFCF12C5FED0A00587194 /* AppLogger.swift */; };
+		685C5B652C635422005D2DBC /* Configuration in Resources */ = {isa = PBXBuildFile; fileRef = 685C5B642C635422005D2DBC /* Configuration */; };
 		68E6F6592C5F66D6002D91C9 /* TripCriticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E6F6582C5F66D6002D91C9 /* TripCriticApp.swift */; };
 		68E6F65B2C5F66D6002D91C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E6F65A2C5F66D6002D91C9 /* ContentView.swift */; };
 		68E6F65D2C5F66D8002D91C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68E6F65C2C5F66D8002D91C9 /* Assets.xcassets */; };
@@ -18,7 +19,7 @@
 
 /* Begin PBXFileReference section */
 		680CFCF12C5FED0A00587194 /* AppLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogger.swift; sourceTree = "<group>"; };
-		685C5B632C633DC0005D2DBC /* Configration */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Configration; sourceTree = "<group>"; };
+		685C5B642C635422005D2DBC /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Configuration; sourceTree = "<group>"; };
 		68E6F6552C5F66D6002D91C9 /* TripCritic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripCritic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68E6F6582C5F66D6002D91C9 /* TripCriticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCriticApp.swift; sourceTree = "<group>"; };
 		68E6F65A2C5F66D6002D91C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,7 +50,7 @@
 		680CFCF52C60CAD800587194 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
-				685C5B632C633DC0005D2DBC /* Configration */,
+				685C5B642C635422005D2DBC /* Configuration */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -168,6 +169,7 @@
 			files = (
 				68E6F6602C5F66D8002D91C9 /* Preview Assets.xcassets in Resources */,
 				68E6F65D2C5F66D8002D91C9 /* Assets.xcassets in Resources */,
+				685C5B652C635422005D2DBC /* Configuration in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
