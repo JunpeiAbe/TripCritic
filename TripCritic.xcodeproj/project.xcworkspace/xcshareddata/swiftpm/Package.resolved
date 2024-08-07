@@ -1,0 +1,24 @@
+{
+  "originHash" : "cd460d4c77362f0f71e3a990c79c2c2ac59d40edb2a29b73a0a02c814f95167d",
+  "pins" : [
+    {
+      "identity" : "ssswiftuigifview",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SimformSolutionsPvtLtd/SSSwiftUIGIFView.git",
+      "state" : {
+        "revision" : "bd16555ae068ec4c01f9bdb913526caa08eb30b1",
+        "version" : "2.0.0"
+      }
+    },
+    {
+      "identity" : "svprogresshud",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SVProgressHUD/SVProgressHUD.git",
+      "state" : {
+        "revision" : "c33f7c775ba7feea6047a1fc3257f2e5863b44f7",
+        "version" : "2.3.1"
+      }
+    }
+  ],
+  "version" : 3
+}
