@@ -18,13 +18,6 @@
 
 /* Begin PBXFileReference section */
 		680CFCF12C5FED0A00587194 /* AppLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogger.swift; sourceTree = "<group>"; };
-		680CFCF72C60CBAC00587194 /* APIClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = APIClient; path = ../../APIClient; sourceTree = "<group>"; };
-		680CFCF82C60CBDF00587194 /* APIRequests */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = APIRequests; path = ../../APIRequests; sourceTree = "<group>"; };
-		680CFCF92C60CBFB00587194 /* Repositories */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Repositories; path = ../../Repositories; sourceTree = "<group>"; };
-		680CFCFA2C60CC3E00587194 /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Models; path = ../../Models; sourceTree = "<group>"; };
-		680CFCFB2C60CC5900587194 /* Protocols */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Protocols; path = ../../Protocols; sourceTree = "<group>"; };
-		680CFCFC2C60CC7400587194 /* Extensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = Extensions; path = ../../Extensions; sourceTree = "<group>"; };
-		680CFCFD2C60CC9500587194 /* ViewComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = ViewComponents; path = ../../ViewComponents; sourceTree = "<group>"; };
 		68E6F6552C5F66D6002D91C9 /* TripCritic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripCritic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68E6F6582C5F66D6002D91C9 /* TripCriticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCriticApp.swift; sourceTree = "<group>"; };
 		68E6F65A2C5F66D6002D91C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,13 +41,6 @@
 		680CFCF42C60CAC500587194 /* CoreModules */ = {
 			isa = PBXGroup;
 			children = (
-				680CFCFD2C60CC9500587194 /* ViewComponents */,
-				680CFCFC2C60CC7400587194 /* Extensions */,
-				680CFCFB2C60CC5900587194 /* Protocols */,
-				680CFCFA2C60CC3E00587194 /* Models */,
-				680CFCF92C60CBFB00587194 /* Repositories */,
-				680CFCF82C60CBDF00587194 /* APIRequests */,
-				680CFCF72C60CBAC00587194 /* APIClient */,
 			);
 			path = CoreModules;
 			sourceTree = "<group>";
