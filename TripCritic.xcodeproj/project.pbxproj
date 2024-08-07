@@ -15,6 +15,7 @@
 		681DF6892C63667E00BCEDFA /* APIClient in Resources */ = {isa = PBXBuildFile; fileRef = 681DF6822C63667D00BCEDFA /* APIClient */; };
 		681DF68A2C63667E00BCEDFA /* APIRequests in Resources */ = {isa = PBXBuildFile; fileRef = 681DF6832C63667E00BCEDFA /* APIRequests */; };
 		681DF68B2C63667E00BCEDFA /* Protocols in Resources */ = {isa = PBXBuildFile; fileRef = 681DF6842C63667E00BCEDFA /* Protocols */; };
+		681DF6952C636B4900BCEDFA /* Configuration in Resources */ = {isa = PBXBuildFile; fileRef = 685C5B642C635422005D2DBC /* Configuration */; };
 		68E6F6592C5F66D6002D91C9 /* TripCriticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E6F6582C5F66D6002D91C9 /* TripCriticApp.swift */; };
 		68E6F65B2C5F66D6002D91C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E6F65A2C5F66D6002D91C9 /* ContentView.swift */; };
 		68E6F65D2C5F66D8002D91C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68E6F65C2C5F66D8002D91C9 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		681DF6822C63667D00BCEDFA /* APIClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = APIClient; sourceTree = "<group>"; };
 		681DF6832C63667E00BCEDFA /* APIRequests */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = APIRequests; sourceTree = "<group>"; };
 		681DF6842C63667E00BCEDFA /* Protocols */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Protocols; sourceTree = "<group>"; };
+		681DF6932C636AF400BCEDFA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		685C5B642C635422005D2DBC /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Configuration; sourceTree = "<group>"; };
 		68E6F6552C5F66D6002D91C9 /* TripCritic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripCritic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68E6F6582C5F66D6002D91C9 /* TripCriticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCriticApp.swift; sourceTree = "<group>"; };
@@ -104,11 +106,12 @@
 		68E6F6572C5F66D6002D91C9 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				68E6F6582C5F66D6002D91C9 /* TripCriticApp.swift */,
-				68E6F65A2C5F66D6002D91C9 /* ContentView.swift */,
-				68E6F65C2C5F66D8002D91C9 /* Assets.xcassets */,
-				68E6F65E2C5F66D8002D91C9 /* Preview Content */,
 				680CFCF12C5FED0A00587194 /* AppLogger.swift */,
+				68E6F65C2C5F66D8002D91C9 /* Assets.xcassets */,
+				68E6F65A2C5F66D6002D91C9 /* ContentView.swift */,
+				681DF6932C636AF400BCEDFA /* Info.plist */,
+				68E6F65E2C5F66D8002D91C9 /* Preview Content */,
+				68E6F6582C5F66D6002D91C9 /* TripCriticApp.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				681DF6952C636B4900BCEDFA /* Configuration in Resources */,
 				681DF6882C63667E00BCEDFA /* Repositories in Resources */,
 				681DF68A2C63667E00BCEDFA /* APIRequests in Resources */,
 				681DF6872C63667E00BCEDFA /* Extensions in Resources */,
@@ -347,7 +351,7 @@
 				DEVELOPMENT_TEAM = 788DC5C46S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TripCritic/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Debug)TripCritic";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -383,7 +387,7 @@
 				DEVELOPMENT_TEAM = 788DC5C46S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TripCritic/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TripCritic;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -482,7 +486,7 @@
 				DEVELOPMENT_TEAM = 788DC5C46S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = TripCritic/Info.plist;
+				INFOPLIST_FILE = App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Staging)TripCritic";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
