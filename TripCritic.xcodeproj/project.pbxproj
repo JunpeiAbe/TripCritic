@@ -18,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		680CFCF12C5FED0A00587194 /* AppLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogger.swift; sourceTree = "<group>"; };
+		685C5B632C633DC0005D2DBC /* Configration */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Configration; sourceTree = "<group>"; };
 		68E6F6552C5F66D6002D91C9 /* TripCritic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripCritic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68E6F6582C5F66D6002D91C9 /* TripCriticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCriticApp.swift; sourceTree = "<group>"; };
 		68E6F65A2C5F66D6002D91C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -48,6 +49,7 @@
 		680CFCF52C60CAD800587194 /* Configurations */ = {
 			isa = PBXGroup;
 			children = (
+				685C5B632C633DC0005D2DBC /* Configration */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
