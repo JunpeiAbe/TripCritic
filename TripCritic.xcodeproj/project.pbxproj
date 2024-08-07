@@ -8,14 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		680CFCF22C5FED0A00587194 /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680CFCF12C5FED0A00587194 /* AppLogger.swift */; };
-		681DF6852C63667E00BCEDFA /* ViewComponents in Resources */ = {isa = PBXBuildFile; fileRef = 681DF67E2C63667D00BCEDFA /* ViewComponents */; };
-		681DF6862C63667E00BCEDFA /* Models in Resources */ = {isa = PBXBuildFile; fileRef = 681DF67F2C63667D00BCEDFA /* Models */; };
-		681DF6872C63667E00BCEDFA /* Extensions in Resources */ = {isa = PBXBuildFile; fileRef = 681DF6802C63667D00BCEDFA /* Extensions */; };
-		681DF6882C63667E00BCEDFA /* Repositories in Resources */ = {isa = PBXBuildFile; fileRef = 681DF6812C63667D00BCEDFA /* Repositories */; };
-		681DF6892C63667E00BCEDFA /* APIClient in Resources */ = {isa = PBXBuildFile; fileRef = 681DF6822C63667D00BCEDFA /* APIClient */; };
-		681DF68A2C63667E00BCEDFA /* APIRequests in Resources */ = {isa = PBXBuildFile; fileRef = 681DF6832C63667E00BCEDFA /* APIRequests */; };
-		681DF68B2C63667E00BCEDFA /* Protocols in Resources */ = {isa = PBXBuildFile; fileRef = 681DF6842C63667E00BCEDFA /* Protocols */; };
-		681DF6952C636B4900BCEDFA /* Configuration in Resources */ = {isa = PBXBuildFile; fileRef = 685C5B642C635422005D2DBC /* Configuration */; };
 		68E6F6592C5F66D6002D91C9 /* TripCriticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E6F6582C5F66D6002D91C9 /* TripCriticApp.swift */; };
 		68E6F65B2C5F66D6002D91C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E6F65A2C5F66D6002D91C9 /* ContentView.swift */; };
 		68E6F65D2C5F66D8002D91C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68E6F65C2C5F66D8002D91C9 /* Assets.xcassets */; };
@@ -190,15 +182,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				681DF6952C636B4900BCEDFA /* Configuration in Resources */,
-				681DF6882C63667E00BCEDFA /* Repositories in Resources */,
-				681DF68A2C63667E00BCEDFA /* APIRequests in Resources */,
-				681DF6872C63667E00BCEDFA /* Extensions in Resources */,
-				681DF68B2C63667E00BCEDFA /* Protocols in Resources */,
 				68E6F6602C5F66D8002D91C9 /* Preview Assets.xcassets in Resources */,
-				681DF6852C63667E00BCEDFA /* ViewComponents in Resources */,
-				681DF6862C63667E00BCEDFA /* Models in Resources */,
-				681DF6892C63667E00BCEDFA /* APIClient in Resources */,
 				68E6F65D2C5F66D8002D91C9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
