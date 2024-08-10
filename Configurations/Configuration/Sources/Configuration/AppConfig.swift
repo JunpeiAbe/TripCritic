@@ -1,4 +1,5 @@
 import Foundation
+import UIKit
 /// アプリ全体の設定値
 public enum AppConfig {
     /// APIのURLの前半部分
@@ -15,4 +16,12 @@ public enum AppConfig {
             forInfoDictionaryKey: "CFBundleShortVersionString"
         ) as! String
     }
+    /// 端末のOSバージョン
+    static public var deviceVersion: String {
+        UIDevice.current.systemVersion
+    }
+    /// 端末ID
+    static public var terminalID: String = ""
+    /// アプリケーションID
+    static public let applicationID: String = ""
 }

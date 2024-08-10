@@ -2,7 +2,7 @@ import Foundation
 import Configuration
 import Protocols
 /// APIの共通定義
-protocol APIRequest: ReachabilityCheckable, CipherProtocol {
+public protocol APIClient: ReachabilityCheckable, CipherProtocol {
     /// 返却データ
     associatedtype Response: Decodable
     /// ベースとなるURL
@@ -13,7 +13,7 @@ protocol APIRequest: ReachabilityCheckable, CipherProtocol {
     static var httpMethod: HttpMethod { get }
 }
 
-extension APIRequest {
+public extension APIClient {
     /// ベースとなるURL
     static var baseURL: URL? {
         URL(string: AppConfig.apiURLPrefix)
@@ -31,7 +31,7 @@ extension APIRequest {
         .post
     }
     
-    func resuest(httpBody: Data?) async -> APIResult<Response> {
+    func request(httpBody: Data?) async -> APIResult<Response> {
         guard let url = Self.url else {
             return APIResult(error: .invalidURL)
         }
@@ -107,16 +107,26 @@ extension APIRequest {
     }
 }
 
-struct APIResult<Response> {
+public struct APIResult<Response> {
     /// ステータスコード
     var statusCode: Int?
     /// APIの返却データ
     var response: Response?
     /// APIエラー
     var error: APIError?
+    
+    public init(
+        statusCode: Int? = nil,
+        response: Response? = nil,
+        error: APIError? = nil
+    ) {
+        self.statusCode = statusCode
+        self.response = response
+        self.error = error
+    }
 }
 
-enum APIError: Error {
+public enum APIError: Error {
     /// 不正なURL
     case invalidURL
     /// 通信エラー
@@ -131,7 +141,7 @@ enum APIError: Error {
     case otherError
 }
 
-enum HttpMethod: String {
+public enum HttpMethod: String {
     case get = "GET"
     case post = "POST"
 }
