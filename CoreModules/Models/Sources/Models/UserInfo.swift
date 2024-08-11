@@ -1,8 +1,8 @@
 import Foundation
 ///ユーザー情報
-struct UserInfo {
+public struct UserInfo {
     let name: String
-    let profileImage: URL?
+    let profileImageURL: String?
     let job: Job
     let sex: Sex
     let birthday: Date

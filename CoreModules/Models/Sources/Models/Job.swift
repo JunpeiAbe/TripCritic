@@ -1,5 +1,5 @@
 /// 職業
-enum Job: String {
+public enum Job: String, Codable {
     /// 会社員
     case employee = "1"
     /// 会社役員

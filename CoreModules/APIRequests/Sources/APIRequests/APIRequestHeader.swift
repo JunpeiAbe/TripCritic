@@ -28,10 +28,10 @@ struct APIRequestHeader<Request: Encodable>: Encodable {
     }
     
     enum CodingKeys: String, CodingKey {
-        case terminalId = "terminal_id"
+        case terminalID = "terminal_id"
         case applicationVersion = "application_version"
         case osVersion = "os_version"
-        case applicationId = "application_id"
+        case applicationID = "application_id"
         case request
     }
 }

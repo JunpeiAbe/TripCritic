@@ -6,33 +6,33 @@ public protocol APIClient: ReachabilityCheckable, CipherProtocol {
     /// 返却データ
     associatedtype Response: Decodable
     /// ベースとなるURL
-    static var baseURL: URL { get }
+    var baseURL: URL { get }
     /// パス(URLの後半部分)
-    static var path: String { get }
+    var path: String { get }
     /// httpメソッド
-    static var httpMethod: HttpMethod { get }
+    var httpMethod: HttpMethod { get }
 }
 
 public extension APIClient {
     /// ベースとなるURL
-    static var baseURL: URL? {
-        URL(string: AppConfig.apiURLPrefix)
+    var baseURL: URL {
+        URL(string: AppConfig.apiURLPrefix)!
     }
     /// 接続先URL
-    static var url: URL? {
+    var url: URL? {
         URL(string: path, relativeTo: baseURL)
     }
     /// デバック時に使用するJSONファイル名
-    static var debugResultFileName: String {
-        Self.path.uppercased()
+    var debugResultFileName: String {
+        self.path.uppercased()
     }
     /// httpメソッド(デフォルトでpost)
-    static var httpMethod: HttpMethod {
+    var httpMethod: HttpMethod {
         .post
     }
     
     func request(httpBody: Data?) async -> APIResult<Response> {
-        guard let url = Self.url else {
+        guard let url = self.url else {
             return APIResult(error: .invalidURL)
         }
         /// 接続状態のチェック
@@ -47,8 +47,8 @@ public extension APIClient {
             return APIResult(error: .parseError)
         }
         var urlRequest = URLRequest(url: url)
-        if Self.httpMethod == .post {
-            urlRequest.httpMethod = Self.httpMethod.rawValue
+        if self.httpMethod == .post {
+            urlRequest.httpMethod = self.httpMethod.rawValue
             urlRequest.setValue("application/json", forHTTPHeaderField: "Content-Type")
             urlRequest.httpBody = encodedData
         }
@@ -78,7 +78,7 @@ public extension APIClient {
                 }
             }
             var responseData: Data = data
-            if Self.httpMethod == .post {
+            if self.httpMethod == .post {
                 /// 復号化
                 guard let decodedDataStr = try JSONDecoder().decode(String?.self, from: data),
                       let decodedData = Data(base64Encoded: decodedDataStr),

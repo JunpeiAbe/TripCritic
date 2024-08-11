@@ -1,5 +1,5 @@
 /// 性別
-enum Sex: String {
+public enum Sex: String, Codable {
     /// 男性
     case man = "1"
     /// 女性

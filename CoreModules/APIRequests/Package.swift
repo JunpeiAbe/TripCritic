@@ -16,7 +16,8 @@ let package = Package(
     ],
     dependencies: [
         .package(path: "../Configurations/Configuration"),
-        .package(path: "./APIClient"),
+        .package(path: "APIClient"),
+        .package(path: "Models"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -25,7 +26,8 @@ let package = Package(
             name: "APIRequests",
             dependencies: [
                 "Configuration",
-                "APIClient"
+                "APIClient",
+                "Models"
             ]
         ),
         .testTarget(
