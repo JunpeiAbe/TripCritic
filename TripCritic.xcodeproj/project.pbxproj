@@ -18,15 +18,6 @@
 
 /* Begin PBXFileReference section */
 		680CFCF12C5FED0A00587194 /* AppLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogger.swift; sourceTree = "<group>"; };
-		681DF67E2C63667D00BCEDFA /* ViewComponents */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ViewComponents; sourceTree = "<group>"; };
-		681DF67F2C63667D00BCEDFA /* Models */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Models; sourceTree = "<group>"; };
-		681DF6802C63667D00BCEDFA /* Extensions */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Extensions; sourceTree = "<group>"; };
-		681DF6812C63667D00BCEDFA /* Repositories */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Repositories; sourceTree = "<group>"; };
-		681DF6822C63667D00BCEDFA /* APIClient */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = APIClient; sourceTree = "<group>"; };
-		681DF6832C63667E00BCEDFA /* APIRequests */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = APIRequests; sourceTree = "<group>"; };
-		681DF6842C63667E00BCEDFA /* Protocols */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Protocols; sourceTree = "<group>"; };
-		681DF6932C636AF400BCEDFA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		685C5B642C635422005D2DBC /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Configuration; sourceTree = "<group>"; };
 		68E6F6552C5F66D6002D91C9 /* TripCritic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripCritic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68E6F6582C5F66D6002D91C9 /* TripCriticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCriticApp.swift; sourceTree = "<group>"; };
 		68E6F65A2C5F66D6002D91C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -47,42 +38,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		680CFCF42C60CAC500587194 /* CoreModules */ = {
-			isa = PBXGroup;
-			children = (
-				681DF6822C63667D00BCEDFA /* APIClient */,
-				681DF6832C63667E00BCEDFA /* APIRequests */,
-				681DF6802C63667D00BCEDFA /* Extensions */,
-				681DF67F2C63667D00BCEDFA /* Models */,
-				681DF6842C63667E00BCEDFA /* Protocols */,
-				681DF6812C63667D00BCEDFA /* Repositories */,
-				681DF67E2C63667D00BCEDFA /* ViewComponents */,
-			);
-			path = CoreModules;
-			sourceTree = "<group>";
-		};
-		680CFCF52C60CAD800587194 /* Configurations */ = {
-			isa = PBXGroup;
-			children = (
-				685C5B642C635422005D2DBC /* Configuration */,
-			);
-			path = Configurations;
-			sourceTree = "<group>";
-		};
-		680CFCF62C60CAEA00587194 /* FeatureModules */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = FeatureModules;
-			sourceTree = "<group>";
-		};
 		68E6F64C2C5F66D6002D91C9 = {
 			isa = PBXGroup;
 			children = (
-				68E6F6572C5F66D6002D91C9 /* App */,
-				680CFCF52C60CAD800587194 /* Configurations */,
-				680CFCF62C60CAEA00587194 /* FeatureModules */,
-				680CFCF42C60CAC500587194 /* CoreModules */,
+				68E6F6572C5F66D6002D91C9 /* TripCritic */,
 				68E6F6562C5F66D6002D91C9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,17 +54,16 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		68E6F6572C5F66D6002D91C9 /* App */ = {
+		68E6F6572C5F66D6002D91C9 /* TripCritic */ = {
 			isa = PBXGroup;
 			children = (
-				680CFCF12C5FED0A00587194 /* AppLogger.swift */,
-				68E6F65C2C5F66D8002D91C9 /* Assets.xcassets */,
-				68E6F65A2C5F66D6002D91C9 /* ContentView.swift */,
-				681DF6932C636AF400BCEDFA /* Info.plist */,
-				68E6F65E2C5F66D8002D91C9 /* Preview Content */,
 				68E6F6582C5F66D6002D91C9 /* TripCriticApp.swift */,
+				68E6F65A2C5F66D6002D91C9 /* ContentView.swift */,
+				68E6F65C2C5F66D8002D91C9 /* Assets.xcassets */,
+				68E6F65E2C5F66D8002D91C9 /* Preview Content */,
+				680CFCF12C5FED0A00587194 /* AppLogger.swift */,
 			);
-			path = App;
+			path = TripCritic;
 			sourceTree = "<group>";
 		};
 		68E6F65E2C5F66D8002D91C9 /* Preview Content */ = {
@@ -331,11 +289,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TripCritic/Preview Content\"";
 				DEVELOPMENT_TEAM = 788DC5C46S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_FILE = TripCritic/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Debug)TripCritic";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -367,11 +325,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TripCritic/Preview Content\"";
 				DEVELOPMENT_TEAM = 788DC5C46S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_FILE = TripCritic/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TripCritic;
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -466,11 +424,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"TripCritic/Preview Content\"";
 				DEVELOPMENT_TEAM = 788DC5C46S;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = App/Info.plist;
+				INFOPLIST_FILE = TripCritic/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "Staging)TripCritic";
 				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
