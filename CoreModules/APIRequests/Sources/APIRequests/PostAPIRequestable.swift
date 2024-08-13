@@ -1,16 +1,16 @@
 import Foundation
 import APIClient
 /// APIのPostリクエスト定義
-protocol PostRequestable: APIClient {
+public protocol PostRequestable: APIClient {
     associatedtype Request: Encodable
-    var header: APIRequestHeader<Request> { get }
 }
 
-extension PostRequestable {
-    static var httpMethod: HttpMethod {
+public extension PostRequestable {
+    var httpMethod: HttpMethod {
         .post
     }
-    func request() async -> APIResult<Response> {
+    func post(_ request: Request) async -> APIResult<Response> {
+        let header = APIRequestHeader(request: request)
         let httpBody: Data
         do {
             httpBody = try JSONEncoder().encode(header)

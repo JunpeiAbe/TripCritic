@@ -1,11 +1,11 @@
 import Foundation
 /// プロフィール取得
-struct GetProfileAPI: PostRequestable {
-    var header: APIRequestHeader<GetProfileRequest>
+public struct GetProfileAPI: PostRequestable {
+    public typealias Request = GetProfileRequest
     
-    typealias Request = GetProfileRequest
+    public typealias Response = GetProfileResponse
     
-    typealias Response = GetProfileResponse
+    public let path: String = "GetProfile"
     
-    var path: String = "GetProfile"
+    public init() {}
 }

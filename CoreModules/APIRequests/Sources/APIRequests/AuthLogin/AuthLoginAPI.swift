@@ -1,11 +1,11 @@
 import Foundation
 /// ユーザー認証API
-struct AuthLoginAPI: PostRequestable {
-    var header: APIRequestHeader<AuthLoginRequest>
+public struct AuthLoginAPI: PostRequestable {
+    public typealias Request = AuthLoginRequest
     
-    typealias Request = AuthLoginRequest
+    public typealias Response = AuthLoginResponse
     
-    typealias Response = AuthLoginResponse
+    public let path: String = "AuthLogin"
     
-    var path: String = "AuthLogin"
+    public init() {}
 }

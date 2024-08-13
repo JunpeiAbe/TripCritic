@@ -1,11 +1,11 @@
 import Foundation
 /// ユーザー登録API
-struct AuthRegisterAPI: PostRequestable {
-    var header: APIRequestHeader<AuthRegisterRequest>
+public struct AuthRegisterAPI: PostRequestable {
+    public typealias Request = AuthRegisterRequest
     
-    typealias Request = AuthRegisterRequest
+    public typealias Response = AuthRegisterResponse
     
-    typealias Response = AuthLoginResponse
+    public let path: String = "AuthRegister"
     
-    var path: String = "AuthRegister"
+    public init() {}
 }

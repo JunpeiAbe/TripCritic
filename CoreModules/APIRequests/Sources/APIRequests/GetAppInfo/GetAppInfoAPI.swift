@@ -1,7 +1,9 @@
 import Foundation
 /// アプリ情報取得API
-struct GetAppInfoAPI: GetRequestable {
-    typealias Response = GetAppInfoResponse
+public struct GetAppInfoAPI: GetRequestable {
+    public typealias Response = GetAppInfoResponse
     
-    var path: String = "AppInfo"
+    public let path: String = "AppInfo"
+    
+    public init() {}
 }

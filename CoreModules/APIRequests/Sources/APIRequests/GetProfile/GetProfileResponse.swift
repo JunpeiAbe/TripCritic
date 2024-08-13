@@ -1,7 +1,7 @@
 import Foundation
 import Models
 /// プロフィール取得APIのレスポンス
-struct GetProfileResponse: Decodable {
+public struct GetProfileResponse: Decodable {
     let status: APIStatus
     let data: Inner?
     

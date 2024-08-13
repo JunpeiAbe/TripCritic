@@ -1,11 +1,11 @@
 import Foundation
 /// ユーザーログアウトAPI
-struct AuthLogoutAPI: PostRequestable {
-    var header: APIRequestHeader<AuthLogoutRequest>
+public struct AuthLogoutAPI: PostRequestable {
+    public typealias Request = AuthLogoutRequest
     
-    typealias Request = AuthLogoutRequest
+    public typealias Response = AuthLogoutResponse
     
-    typealias Response = AuthLogoutResponse
+    public let path: String = "AuthLogout"
     
-    var path: String = "AuthLogout"
+    public init() {}
 }

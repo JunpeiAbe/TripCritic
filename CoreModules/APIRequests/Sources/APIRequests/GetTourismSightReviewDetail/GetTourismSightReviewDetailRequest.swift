@@ -1,6 +1,6 @@
 import Foundation
 /// 観光スポットレビュー詳細取得APIのリクエスト
-struct GetTourismSightReviewDetailRequest: Encodable {
+public struct GetTourismSightReviewDetailRequest: Encodable {
     /// トークン
     let token: String
     /// レビューID
@@ -12,5 +12,15 @@ struct GetTourismSightReviewDetailRequest: Encodable {
         case token
         case reviewID = "review_id"
         case mailAddress = "mail_address"
+    }
+    
+    public init(
+        token: String,
+        reviewID: Int,
+        mailAddress: String
+    ) {
+        self.token = token
+        self.reviewID = reviewID
+        self.mailAddress = mailAddress
     }
 }

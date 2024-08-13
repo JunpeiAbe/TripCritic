@@ -1,11 +1,11 @@
 import Foundation
 /// 観光スポットレビュー詳細取得API
-struct GetTourismSightReviewDetailAPI: PostRequestable {
-    var header: APIRequestHeader<GetTourismSightReviewDetailRequest>
+public struct GetTourismSightReviewDetailAPI: PostRequestable {
+    public typealias Request = GetTourismSightReviewDetailRequest
     
-    typealias Request = GetTourismSightReviewDetailRequest
+    public typealias Response = GetTourismSightReviewDetailResponse
     
-    typealias Response = GetTourismSightReviewDetailResponse
+    public let path: String = "GetTourismSightReviewDetail"
     
-    var path: String = "GetTourismSightReviewDetail"
+    public init() {}
 }

@@ -1,7 +1,7 @@
 import Foundation
 import Models
 /// アプリ情報取得APIのレスポンス
-struct GetAppInfoResponse: Decodable {
+public struct GetAppInfoResponse: Decodable {
     let status: APIStatus
     let data: Inner?
     

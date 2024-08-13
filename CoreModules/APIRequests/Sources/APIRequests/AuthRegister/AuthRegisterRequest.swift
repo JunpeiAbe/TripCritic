@@ -1,7 +1,7 @@
 import Foundation
 import Models
 /// ユーザー登録APIのリクエスト
-struct AuthRegisterRequest: Encodable {
+public struct AuthRegisterRequest: Encodable {
     /// ユーザーID
     let mailAddress: String
     /// パスワード
@@ -28,5 +28,25 @@ struct AuthRegisterRequest: Encodable {
         case sex
         case birthday
         case message 
+    }
+    
+    public init(
+        mailAddress: String,
+        password: String,
+        userName: String,
+        profileImageURL: String?,
+        job: Job,
+        sex: Sex,
+        birthday: String,
+        message: String?
+    ) {
+        self.mailAddress = mailAddress
+        self.password = password
+        self.userName = userName
+        self.profileImageURL = profileImageURL
+        self.job = job
+        self.sex = sex
+        self.birthday = birthday
+        self.message = message
     }
 }

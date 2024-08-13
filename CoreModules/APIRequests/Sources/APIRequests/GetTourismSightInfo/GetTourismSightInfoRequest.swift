@@ -1,6 +1,6 @@
 import Foundation
 /// 観光スポット情報取得API
-struct GetTourismSightInfoRequest: Encodable {
+public struct GetTourismSightInfoRequest: Encodable {
     /// トークン
     let token: String
     /// 緯度
@@ -18,5 +18,19 @@ struct GetTourismSightInfoRequest: Encodable {
         case longitude
         case radius
         case mailAddress = "mail_address"
+    }
+    
+    public init(
+        token: String,
+        latitude: Double,
+        longitude: Double,
+        radius: Int,
+        mailAddress: String
+    ) {
+        self.token = token
+        self.latitude = latitude
+        self.longitude = longitude
+        self.radius = radius
+        self.mailAddress = mailAddress
     }
 }

@@ -1,6 +1,6 @@
 import Foundation
 /// ユーザーログアウトAPIのリクエスト
-struct AuthLogoutRequest: Encodable {
+public struct AuthLogoutRequest: Encodable {
     /// ユーザーID
     let mailAddress: String
     /// トークン
@@ -9,5 +9,13 @@ struct AuthLogoutRequest: Encodable {
     enum CodingKeys: String, CodingKey {
         case mailAddress = "mail_address"
         case token
+    }
+    
+    public init(
+        mailAddress: String,
+        token: String
+    ) {
+        self.mailAddress = mailAddress
+        self.token = token
     }
 }

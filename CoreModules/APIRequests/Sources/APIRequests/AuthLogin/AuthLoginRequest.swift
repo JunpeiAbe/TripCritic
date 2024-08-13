@@ -1,6 +1,6 @@
 import Foundation
 /// ユーザー認証APIのリクエスト
-struct AuthLoginRequest: Encodable {
+public struct AuthLoginRequest: Encodable {
     /// ユーザーID
     let mailAddress: String
     /// パスワード
@@ -14,13 +14,13 @@ struct AuthLoginRequest: Encodable {
         case token
     }
     /// 手動ログイン
-    init(mailAddress: String, password: String) {
+    public init(mailAddress: String, password: String) {
         self.mailAddress = mailAddress
         self.password = password
         self.token = nil
     }
     /// 自動ログイン
-    init(mailAddress: String, token: String) {
+    public init(mailAddress: String, token: String) {
         self.mailAddress = mailAddress
         self.password = nil
         self.token = token

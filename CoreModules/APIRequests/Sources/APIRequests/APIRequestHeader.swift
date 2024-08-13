@@ -1,7 +1,7 @@
 import Foundation
 import Configuration
 /// APIのヘッダ情報(ボディに含める)
-struct APIRequestHeader<Request: Encodable>: Encodable {
+public struct APIRequestHeader<Request: Encodable>: Encodable {
     /// 端末ID
     var terminalID: String
     /// アプリバージョン

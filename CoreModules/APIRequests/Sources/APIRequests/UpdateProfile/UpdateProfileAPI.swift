@@ -1,11 +1,11 @@
 import Foundation
 /// プロフィール更新API
-struct UpdateProfileAPI: PostRequestable {
-    var header: APIRequestHeader<UpdateProfileRequest>
+public struct UpdateProfileAPI: PostRequestable {
+    public typealias Request = UpdateProfileRequest
     
-    typealias Request = UpdateProfileRequest
+    public typealias Response = UpdateProfileResponse
     
-    typealias Response = UpdateProfileResponse
+    public let path: String = "UpdateProfile"
     
-    var path: String = "UpdateProfile"
+    public init() {}
 }

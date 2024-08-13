@@ -11,6 +11,8 @@ public protocol APIClient: ReachabilityCheckable, CipherProtocol {
     var path: String { get }
     /// httpメソッド
     var httpMethod: HttpMethod { get }
+    /// リクエストメソッド
+    func request(httpBody: Data?) async -> APIResult<Response>
 }
 
 public extension APIClient {

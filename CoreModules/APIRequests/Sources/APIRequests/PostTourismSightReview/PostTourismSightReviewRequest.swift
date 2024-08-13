@@ -1,6 +1,6 @@
 import Foundation
 /// 観光スポットレビュー投稿APIのリクエスト
-struct PostToursimSightReviewRequest: Encodable {
+public struct PostTourismSightReviewRequest: Encodable {
     /// トークン
     let token: String
     /// ユーザーID
@@ -21,5 +21,21 @@ struct PostToursimSightReviewRequest: Encodable {
         case rating
         case comment
         case locationPhotoURL = "location_photo_url"
+    }
+    
+    public init(
+        token: String,
+        mailAddress: String,
+        tourismSightID: Int,
+        rating: Double,
+        comment: String,
+        locationPhotoURL: String?
+    ) {
+        self.token = token
+        self.mailAddress = mailAddress
+        self.tourismSightID = tourismSightID
+        self.rating = rating
+        self.comment = comment
+        self.locationPhotoURL = locationPhotoURL
     }
 }

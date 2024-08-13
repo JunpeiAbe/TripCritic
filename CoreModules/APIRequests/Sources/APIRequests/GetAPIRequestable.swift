@@ -1,13 +1,13 @@
 import Foundation
 import APIClient
 /// APIのGetリクエスト定義
-protocol GetRequestable: APIClient {}
+public protocol GetRequestable: APIClient {}
 
-extension GetRequestable {
-    static var httpMethod: HttpMethod {
+public extension GetRequestable {
+    var httpMethod: HttpMethod {
         .get
     }
-    func request() async -> APIResult<Response> {
+    func get() async -> APIResult<Response> {
         await self.request(httpBody: nil)
     }
 }

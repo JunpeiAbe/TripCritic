@@ -1,7 +1,7 @@
 import Foundation
 import Models
 /// 観光スポット情報取得APIのレスポンス
-struct GetTourismSightInfoResponse: Decodable {
+public struct GetTourismSightInfoResponse: Decodable {
     let status: APIStatus
     let data: Inner?
     

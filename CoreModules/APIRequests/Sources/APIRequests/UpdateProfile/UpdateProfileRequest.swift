@@ -1,7 +1,7 @@
 import Foundation
 import Models
 /// プロフィール更新APIのリクエスト
-struct UpdateProfileRequest: Encodable {
+public struct UpdateProfileRequest: Encodable {
     /// ユーザーID
     let mailAddress: String
     /// トークン
@@ -28,5 +28,25 @@ struct UpdateProfileRequest: Encodable {
         case sex
         case birthday
         case message
+    }
+    
+    public init(
+        mailAddress: String,
+        token: String,
+        userName: String,
+        profileImageURL: String?,
+        job: Job,
+        sex: Sex,
+        birthday: String,
+        message: String?
+    ) {
+        self.mailAddress = mailAddress
+        self.token = token
+        self.userName = userName
+        self.profileImageURL = profileImageURL
+        self.job = job
+        self.sex = sex
+        self.birthday = birthday
+        self.message = message
     }
 }

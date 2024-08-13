@@ -1,6 +1,6 @@
 import Foundation
 /// 観光スポットレビュー一覧取得APIのリクエスト
-struct GetToursimSightReviewsRequest: Encodable {
+public struct GetTourismSightReviewsRequest: Encodable {
     /// トークン
     let token: String
     /// 観光スポットID
@@ -24,5 +24,23 @@ struct GetToursimSightReviewsRequest: Encodable {
         case startListCount = "start_list_count"
         case getListCount = "get_list_count"
         case allSearchCount = "all_search_count"
+    }
+    
+    public init(
+        token: String,
+        tourismSightID: Int,
+        mailAddress: String,
+        lastUpdateDate: String?,
+        startListCount: Int,
+        getListCount: Int,
+        allSearchCount: Int
+    ) {
+        self.token = token
+        self.tourismSightID = tourismSightID
+        self.mailAddress = mailAddress
+        self.lastUpdateDate = lastUpdateDate
+        self.startListCount = startListCount
+        self.getListCount = getListCount
+        self.allSearchCount = allSearchCount
     }
 }

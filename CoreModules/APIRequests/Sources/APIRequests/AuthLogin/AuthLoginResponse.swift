@@ -1,7 +1,7 @@
 import Foundation
 import Models
 /// ユーザー認証APIのレスポンス
-struct AuthLoginResponse: Decodable {
+public struct AuthLoginResponse: Decodable {
     let status: APIStatus
     let data: Inner?
     

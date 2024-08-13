@@ -1,7 +1,7 @@
 import Foundation
 import Models
 /// ユーザーログアウトAPIのレスポンス
-struct AuthLogoutResponse: Decodable {
+public struct AuthLogoutResponse: Decodable {
     let status: APIStatus
     let data: Inner?
     
