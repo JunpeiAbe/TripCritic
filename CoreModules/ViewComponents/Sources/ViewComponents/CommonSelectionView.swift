@@ -5,9 +5,10 @@ struct CommonSelectionView: View {
     @Binding var options: [SelectOption]
     /// 選択状態を一時保存するための配列
     @State private var temporaryOptions: [SelectOption]
-    var isApplyButtonEnabled: Bool {
+    private var isApplyButtonEnabled: Bool {
         self.temporaryOptions.contains { $0.isSelected }
     }
+    @State private var contentHeight: CGFloat = 0
     let title: String
     let positiveAction: (() -> Void)
     let negativeAction: (() -> Void)
@@ -28,68 +29,77 @@ struct CommonSelectionView: View {
     }
     
     var body: some View {
-        VStack {
-            /// タイトル
-            HStack {
-                Text(self.title)
-                    .font(.system(size: 20,weight: .semibold))
-                Spacer()
-            }
             VStack {
-                /// 選択一覧
-                ScrollView {
-                    VStack(spacing:10) {
-                        ForEach(self.temporaryOptions) { option in
-                            CommonButton(
-                                title: option.title,
-                                font: .system(size: 18,weight: .bold),
-                                backgroundColor: option.isSelected 
-                                ? .red
-                                : .gray.opacity(0.5),
-                                cornerRadius:10,
-                                isEnabled: .constant(true)
-                            ) {
-                                self.selectOption(option)
+                /// タイトル
+                HStack {
+                    Text(self.title)
+                        .font(.system(size: 20,weight: .semibold))
+                    Spacer()
+                }
+                VStack {
+                    /// 選択一覧
+                    ScrollView {
+                        VStack(spacing:10) {
+                                ForEach(self.temporaryOptions) { option in
+                                    CommonButton(
+                                        title: option.title,
+                                        font: .system(size: 18,weight: .bold),
+                                        backgroundColor: option.isSelected
+                                        ? .blue
+                                        : .gray.opacity(0.5),
+                                        cornerRadius:10,
+                                        isEnabled: .constant(true)
+                                    ) {
+                                        self.selectOption(option)
+                                    }
+                                    .frame(height: 48)
+                                    .buttonStyle(DarkenButtonStyle())
+                                }
+                        }
+                        .background {
+                            GeometryReader { contentGeometry in
+                                Color.clear
+                                    .onAppear {
+                                        self.contentHeight = contentGeometry.size.height
+                                }
                             }
-                            .frame(height: 48)
-                            .buttonStyle(DarkenButtonStyle())
                         }
                     }
-                }
-                
-                HStack {
-                    /// applyボタン
-                    CommonButton(
-                        title: "Apply",
-                        font: .system(size: 18,weight: .bold),
-                        cornerRadius: 10,
-                        isEnabled: .constant(self.isApplyButtonEnabled)
-                    ) {
-                        self.applySelection()
-                        self.isPresented = false
-                        self.positiveAction()
+                    Spacer()
+                    HStack {
+                        /// applyボタン
+                        CommonButton(
+                            title: "Apply",
+                            font: .system(size: 18,weight: .bold),
+                            cornerRadius: 10,
+                            isEnabled: .constant(self.isApplyButtonEnabled)
+                        ) {
+                            self.applySelection()
+                            self.isPresented = false
+                            self.positiveAction()
+                        }
+                        .frame(height: 48)
+                        .buttonStyle(DarkenButtonStyle())
+                        /// Cancelボタン
+                        CommonButton(
+                            title: "Cancel",
+                            font: .system(size: 18,weight: .bold),
+                            foregroundColor: .black,
+                            backgroundColor: .gray.opacity(0.2),
+                            cornerRadius:10,
+                            isEnabled: .constant(true)
+                        ) {
+                            self.isPresented = false
+                            self.negativeAction()
+                        }
+                        .frame(height: 48)
+                        .buttonStyle(DarkenButtonStyle())
                     }
-                    .frame(height: 48)
-                    .buttonStyle(DarkenButtonStyle())
-                    /// Cancelボタン
-                    CommonButton(
-                        title: "Cancel",
-                        font: .system(size: 18,weight: .bold),
-                        foregroundColor: .black,
-                        backgroundColor: .gray.opacity(0.2),
-                        cornerRadius:10,
-                        isEnabled: .constant(true)
-                    ) {
-                        self.isPresented = false
-                        self.negativeAction()
-                    }
-                    .frame(height: 48)
-                    .buttonStyle(DarkenButtonStyle())
                 }
             }
-        }
-        .padding(16)
-        //.presentationDetents([.medium])
+            .padding(16)
+            .presentationDetents([.medium])
+            .interactiveDismissDisabled()
     }
     
     private func selectOption(_ selectedOption: SelectOption) {
@@ -146,8 +156,6 @@ struct CommonSelectionView: View {
                             title: "無職",
                             isSelected: false
                         ),
-                        
-                        
                     ]
                 ), 
         title: "職業",
