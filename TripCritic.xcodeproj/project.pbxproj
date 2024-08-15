@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		680CFCF22C5FED0A00587194 /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 680CFCF12C5FED0A00587194 /* AppLogger.swift */; };
-		68E6F6592C5F66D6002D91C9 /* TripCriticApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E6F6582C5F66D6002D91C9 /* TripCriticApp.swift */; };
-		68E6F65B2C5F66D6002D91C9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E6F65A2C5F66D6002D91C9 /* ContentView.swift */; };
+		68A977CA2C6E256B0081B4C0 /* ViewComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 68A977C92C6E256B0081B4C0 /* ViewComponents */; };
+		68A977CC2C6E26430081B4C0 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E6F6582C5F66D6002D91C9 /* Main.swift */; };
 		68E6F65D2C5F66D8002D91C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68E6F65C2C5F66D8002D91C9 /* Assets.xcassets */; };
 		68E6F6602C5F66D8002D91C9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68E6F65F2C5F66D8002D91C9 /* Preview Assets.xcassets */; };
 		68E6F6682C5FAB5B002D91C9 /* SSSwiftUIGIFView in Frameworks */ = {isa = PBXBuildFile; productRef = 68E6F6672C5FAB5B002D91C9 /* SSSwiftUIGIFView */; };
@@ -28,8 +27,7 @@
 		681DF6932C636AF400BCEDFA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		685C5B642C635422005D2DBC /* Configuration */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Configuration; sourceTree = "<group>"; };
 		68E6F6552C5F66D6002D91C9 /* TripCritic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TripCritic.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		68E6F6582C5F66D6002D91C9 /* TripCriticApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripCriticApp.swift; sourceTree = "<group>"; };
-		68E6F65A2C5F66D6002D91C9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		68E6F6582C5F66D6002D91C9 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
 		68E6F65C2C5F66D8002D91C9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68E6F65F2C5F66D8002D91C9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -40,6 +38,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68E6F6802C5FC58F002D91C9 /* SVProgressHUD in Frameworks */,
+				68A977CA2C6E256B0081B4C0 /* ViewComponents in Frameworks */,
 				68E6F6682C5FAB5B002D91C9 /* SSSwiftUIGIFView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -76,6 +75,13 @@
 			path = FeatureModules;
 			sourceTree = "<group>";
 		};
+		68A977C42C6E22BD0081B4C0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		68E6F64C2C5F66D6002D91C9 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +90,7 @@
 				680CFCF62C60CAEA00587194 /* FeatureModules */,
 				680CFCF42C60CAC500587194 /* CoreModules */,
 				68E6F6562C5F66D6002D91C9 /* Products */,
+				68A977C42C6E22BD0081B4C0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,10 +107,9 @@
 			children = (
 				680CFCF12C5FED0A00587194 /* AppLogger.swift */,
 				68E6F65C2C5F66D8002D91C9 /* Assets.xcassets */,
-				68E6F65A2C5F66D6002D91C9 /* ContentView.swift */,
 				681DF6932C636AF400BCEDFA /* Info.plist */,
 				68E6F65E2C5F66D8002D91C9 /* Preview Content */,
-				68E6F6582C5F66D6002D91C9 /* TripCriticApp.swift */,
+				68E6F6582C5F66D6002D91C9 /* Main.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -123,9 +129,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 68E6F6632C5F66D8002D91C9 /* Build configuration list for PBXNativeTarget "TripCritic" */;
 			buildPhases = (
-				68E6F6512C5F66D6002D91C9 /* Sources */,
 				68E6F6522C5F66D6002D91C9 /* Frameworks */,
 				68E6F6532C5F66D6002D91C9 /* Resources */,
+				68A977CB2C6E263D0081B4C0 /* Sources */,
 			);
 			buildRules = (
 			);
@@ -135,6 +141,7 @@
 			packageProductDependencies = (
 				68E6F6672C5FAB5B002D91C9 /* SSSwiftUIGIFView */,
 				68E6F67F2C5FC58F002D91C9 /* SVProgressHUD */,
+				68A977C92C6E256B0081B4C0 /* ViewComponents */,
 			);
 			productName = TripCritic;
 			productReference = 68E6F6552C5F66D6002D91C9 /* TripCritic.app */;
@@ -190,13 +197,11 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		68E6F6512C5F66D6002D91C9 /* Sources */ = {
+		68A977CB2C6E263D0081B4C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				680CFCF22C5FED0A00587194 /* AppLogger.swift in Sources */,
-				68E6F65B2C5F66D6002D91C9 /* ContentView.swift in Sources */,
-				68E6F6592C5F66D6002D91C9 /* TripCriticApp.swift in Sources */,
+				68A977CC2C6E26430081B4C0 /* Main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -539,6 +544,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		68A977C92C6E256B0081B4C0 /* ViewComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ViewComponents;
+		};
 		68E6F6672C5FAB5B002D91C9 /* SSSwiftUIGIFView */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 68E6F6662C5FAB5B002D91C9 /* XCRemoteSwiftPackageReference "SSSwiftUIGIFView" */;
